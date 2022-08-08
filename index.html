@@ -418,7 +418,7 @@
                     <h2 class="subscribe-title">Підпишіться на розсилку</h2>
                     <ul class="subscribe-form list">
                         <li class="subcribe-item">
-                            <input class="email-input" type="text" placeholder="E-mail" />
+                            <input class="email-input" name="user-email" type="email" placeholder="E-mail" />
                         </li>
                         <li class="subscribe-item">
                             <button class="btn-send" type="button">
@@ -435,15 +435,39 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
+            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
             <button data-modal-close class="btn-close" type="button">
           <svg class="modal-icon" width="18" height="18">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
-        </div>
+            <form class="modal-form">
+                <div class="modal-field">
+                    <label class="modal-label" for="user-name">Ім'я</label>
+                    <input type="text" class="modal-input" name="user-name" id="user-name" />
+                </div>
+                <div class="modal-field">
+                    <label class="modal-label" for="user-phone">Телефон</label>
+                    <input type="tel" class="modal-input" name="user-phone" id="user-phone" />
+                </div>
+                <div class="modal-field">
+                    <label class="modal-label" for="user-email">Пошта</label>
+                    <input type="email" class="modal-input" name="user-email" id="user-email" />
+                </div>
+
+                <div class="modal-field">
+                    <label class="modal-form" for="user-text">Коментар</label>
+                    <textarea name="user-text" id="user-text" placeholder="Введіть текст" class="modal-text"></textarea>
+                </div>
+                <input type="checkbox" name="add" id="cheese" value="cheese" />
+                <label for="tomatos">Погоджуюся з розсилкою та приймаю <span><a href="" class="term-contract">Умови договору</a></span></label
+          >
+
+          <button type="submit">Відправити</button>
+        </form>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
-</body>
-
+  </body>
 </html>

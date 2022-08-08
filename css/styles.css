@@ -537,11 +537,15 @@ img {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-    color: var(--foot-color);
+    color: var(--accent-color);
     background-color: transparent;
     display: flex;
     align-items: center;
     padding-left: 16px;
+}
+
+.email-input::placeholder {
+    color: var(--foot-color);
 }
 
 .btn-send {
@@ -715,6 +719,7 @@ img {
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--timing-duration) var(--timing-function);
+    padding: 40px;
 }
 
 .btn-close {
