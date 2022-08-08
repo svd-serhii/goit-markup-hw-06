@@ -214,53 +214,6 @@ img {
     background-color: var(--btn-hover);
 }
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--backdrop-color);
-    opacity: 1;
-    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
-}
-
-.backdrop.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
-}
-
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 528px;
-    min-height: 581px;
-    background-color: var(--accent-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transform: translate(-50%, -50%) scale(1);
-    transition: transform var(--timing-duration) var(--timing-function);
-}
-
-.btn-close {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    right: 8px;
-    top: 8px;
-    border-radius: 50%;
-    background: var(--accent-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
 
 /* Features */
 
@@ -363,7 +316,7 @@ img {
 
 .team-item {
     /* margin-right: auto; */
-    background: #ffffff;
+    background: var(--accent-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -554,11 +507,12 @@ img {
 
 .footer-soc-wrap {
     margin-top: 12px;
+    /* margin-left: 70px; */
 }
 
 .footer-wrap {
     display: flex;
-    gap: 70px;
+    justify-content: space-between;
 }
 
 .subscribe-wrap {
@@ -574,8 +528,8 @@ img {
 .email-input {
     width: 358px;
     height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border: 1px solid var(--foot-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     font-family: inherit;
     font-style: normal;
@@ -583,19 +537,12 @@ img {
     font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--foot-color);
     background-color: transparent;
     display: flex;
     align-items: center;
     padding-left: 16px;
 }
-
-
-/* .email-input :active {
-    border: 1px solid rgba(33, 150, 243, 0);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
-} */
 
 .btn-send {
     background-color: var(--brand-color);
@@ -623,8 +570,6 @@ img {
 .btn-send:hover,
 .btn-send:focus {
     background-color: var(--btn-hover);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
 }
 
 
@@ -733,4 +678,54 @@ img {
 
 .projects-item:hover .project-text {
     transform: translateY(0%);
+}
+
+
+/* Modal */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--backdrop-color);
+    opacity: 1;
+    transition: opacity var(--timing-duration) var(--timing-function), visibility var(--timing-duration) var(--timing-function);
+}
+
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--accent-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--timing-duration) var(--timing-function);
+}
+
+.btn-close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
