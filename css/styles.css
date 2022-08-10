@@ -735,6 +735,15 @@ img {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.btn-close:hover,
+.btn-close:focus {
+    color: var(--brand-color);
+}
+
+.modal-icon-close {
+    fill: currentColor;
+}
+
 .modal-title {
     font-weight: 700;
     font-size: 20px;
@@ -766,6 +775,7 @@ img {
     border-radius: 4px;
     margin-bottom: 28px;
     padding-left: 42px;
+    transition: border var(--timing-duration) var(--timing-function);
 }
 
 .modal-input:focus {
@@ -798,6 +808,11 @@ img {
     line-height: 14px;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-ch {
+    background: #2196f3;
+    border-radius: 2px;
 }
 
 .modal-agreement {
