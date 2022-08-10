@@ -241,7 +241,7 @@ img {
     align-items: center;
     height: 120px;
     margin-bottom: 30px;
-    background: #f5f4fa;
+    background: var(--portfolio-bcg-color);
     border-radius: 4px;
 }
 
@@ -548,6 +548,11 @@ img {
     color: var(--foot-color);
 }
 
+.email-input:focus {
+    outline: none;
+    border: 1px solid var(--overflow-color);
+}
+
 .btn-send {
     background-color: var(--brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -733,11 +738,12 @@ img {
     border-radius: 50%;
     background: var(--accent-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: color var(--timing-duration) var(--timing-function);
 }
 
 .btn-close:hover,
 .btn-close:focus {
-    color: var(--brand-color);
+    color: var(--btn-hover);
 }
 
 .modal-icon-close {
@@ -758,14 +764,17 @@ img {
 }
 
 .modal-field {
-    position: relative;
+    margin-bottom: 10px;
 }
 
 .modal-label {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50px);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--second-color);
+    display: block;
+    margin-bottom: 4px;
 }
 
 .modal-input {
@@ -773,33 +782,40 @@ img {
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    margin-bottom: 28px;
     padding-left: 42px;
+    background-color: transparent;
     transition: border var(--timing-duration) var(--timing-function);
 }
 
-.modal-input:focus {
-    border: 1px solid var(--brand-color);
+.modal-input:focus,
+.modal-text:focus {
+    border: 1px solid var(--overflow-color);
+    outline: transparent;
+}
+
+.input-wrap {
+    position: relative;
 }
 
 .modal-icon {
     position: absolute;
-    bottom: 50%;
+    top: 50%;
     left: 15px;
     transform: translateY(-50%);
+    transition: fill var(--timing-duration) var(--timing-function);
 }
 
-.comment {
-    transform: translateY(-90px);
+.modal-field-text {
+    margin-bottom: 20px;
 }
 
 .modal-text {
     width: 100%;
     height: 120px;
-    margin-bottom: 20px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 12px 16px;
+    resize: none;
 }
 
 .modal-text::placeholder {
@@ -810,28 +826,87 @@ img {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-ch {
-    background: #2196f3;
-    border-radius: 2px;
+.modal-input:focus~.modal-icon {
+    fill: var(--overflow-color);
 }
 
-.modal-agreement {
+.modal-field-check {
     margin-bottom: 30px;
-    margin-left: 12px;
 }
 
-.agreement {
+.check-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 400;
     font-size: 14px;
-    line-height: 1.71;
+    line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--second-color);
 }
 
-.term-agreement {
-    color: rgba(33, 150, 243, 1);
+.check-text span {
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--timing-duration) var(--timing-function);
+    transition: border-color var(--timing-duration) var(--timing-function);
 }
 
-.modal-input:focus~.modal-icon {
-    fill: var(--brand-color);
+.check-icon {
+    fill: transparent;
+    transition: fill var(--timing-duration) var(--timing-function);
+}
+
+.modal-check:checked+.check-text span {
+    background-color: var(--brand-color);
+    border: none;
+}
+
+.modal-check:focus+.check-text span {
+    border-color: var(--main-color);
+}
+
+.modal-check:checked+.check-text .check-icon {
+    fill: var(--accent-color);
+}
+
+.policy-agreement {
+    color: var(--overflow-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+}
+
+.btn-modal {
+    background: var(--brand-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: var(--accent-color);
+    padding: 10px 52px;
+    border: none;
+    transition: background-color var(--timing-duration) var(--timing-function);
+}
+
+.btn-modal:hover,
+.btn-modal:focus {
+    background-color: var(--btn-hover);
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
