@@ -422,6 +422,9 @@ img {
     background-color: var(--background);
 }
 
+
+/* Address */
+
 .address {
     font-style: normal;
 }
@@ -479,6 +482,9 @@ img {
     margin-bottom: 20px;
 }
 
+
+/* Social contacts */
+
 .footer-soc {
     display: flex;
     gap: 10px;
@@ -514,6 +520,9 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+
+/* Subscribe */
 
 .subscribe-wrap {
     margin-top: 12px;
@@ -557,6 +566,7 @@ img {
     background-color: var(--brand-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    border: none;
     font-family: inherit;
     font-style: normal;
     font-weight: 700;
@@ -690,7 +700,10 @@ img {
 }
 
 
-/* Modal */
+/* Modal & backdrop */
+
+
+/* Backdrop */
 
 .backdrop {
     position: fixed;
@@ -713,6 +726,9 @@ img {
     transform: translate(-50%, -50%) scale(0);
 }
 
+
+/* Modal window */
+
 .modal {
     position: absolute;
     top: 50%;
@@ -727,14 +743,21 @@ img {
     padding: 40px;
 }
 
-.btn-close {
+
+/* Button close modal */
+
+.btn-close-wrap {
     position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.btn-close {
     display: flex;
+    justify-content: center;
     align-items: center;
     width: 30px;
     height: 30px;
-    right: 8px;
-    top: 8px;
     border-radius: 50%;
     background: var(--accent-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -745,6 +768,9 @@ img {
 .btn-close:focus {
     color: var(--btn-hover);
 }
+
+
+/* Modal Form */
 
 .modal-icon-close {
     fill: currentColor;
@@ -834,6 +860,9 @@ img {
     margin-bottom: 30px;
 }
 
+
+/* Checkbox */
+
 .check-text {
     display: flex;
     align-items: center;
@@ -883,6 +912,9 @@ img {
     line-height: 1.7;
     letter-spacing: 0.03em;
 }
+
+
+/* Button modal submit */
 
 .btn-modal {
     background: var(--brand-color);
